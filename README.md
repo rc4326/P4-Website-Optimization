@@ -2,7 +2,7 @@ Readme
 
 -How to Run
 
-	Download the the entire directory from 
+	Download the the entire directory from https://github.com/rc4326/P4-Website-Optimization
 
 -Optimizations made on index.html
 	-minify HTML, JS, and CSS
