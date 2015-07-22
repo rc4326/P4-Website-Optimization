@@ -1,8 +1,7 @@
 Readme
 
 -How to Run
-
-	Download the the entire directory from https://github.com/rc4326/P4-Website-Optimization and open Index.html for the main page and open views/pizza.html for the pizza page
+		Download the the entire directory from https://github.com/rc4326/P4-Website-Optimization and open Index.html for the main page and open views/pizza.html for the pizza page
 
 -Optimizations made on index.html
 	-minify HTML, JS, and CSS
