@@ -468,8 +468,9 @@ var resizePizzas = function(size) {
     //removed the unecessary pixel changes and simplified the for loop 
     //cached the number of randompizzas into a variable so it didn't reiterate within the FOR LOOP
 
-    var randomPizzas = document.getElementsByClassName("randomPizzaContainer");
-    var numPizza = randomPizzas.length;
+    var randomPizzas = document.getElementsByClassName("randomPizzaContainer"); //declare an array of all the RandomPizzaContainers
+    var numPizza = randomPizzas.length; //count the number of randomPizza containers and assign to a variable
+		//now run the for loop to to assign the exact number of pizzas to the correct size
     for (var i = 0; i < numPizza; i++) {
       randomPizzas[i].style.width = newWidth + "%";
     }
@@ -527,8 +528,10 @@ function updatePositions() {
 
   var items = document.getElementsByClassName('mover');
   var numItems = items.length;
-  var phase = Math.sin((document.body.scrollTop/ 1250) + (numItems % 5));
+	var scrollCache = document.body.scrollTop;
+	var phase;
   for (var i = 0; i < numItems; i++) {
+		 phase = Math.sin((scrollCache / 1250) + (i % 5));
     items[i].style.left = items[i].basicLeft + 100 * phase + 'px';
   }
 
@@ -551,11 +554,12 @@ window.addEventListener('scroll', updatePositions);
 document.addEventListener('DOMContentLoaded', function() {
   var cols = 8;
   var s = 256;
-  var loadedPizzas = screen.height / 100 * cols;
+  var loadedPizzas = screen.height / 100 * cols;//calculate the needed images based upon the screen height
   console.log(screen.height);
   console.log(loadedPizzas);
+	
   for (var i = 0; i < loadedPizzas; i++) {
-    var elem = document.createElement('img');
+		var elem = document.createElement('img');
     elem.className = 'mover';
     elem.src = "images/pizza.png";
     elem.style.height = "100px";
